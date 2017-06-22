@@ -1,0 +1,106 @@
+[colors]
+; Use as ${colors.[color]}
+; nord color scheme
+bg     = #2E3440
+fg     = #D8DEE9
+red    = #BF616A
+green  = #A3BE8C
+orange = #EBCB8B
+blue   = #81A1C1
+purple = #B48EAD
+teal   = #88C0D0
+
+[bar/bar]
+; if not set -> $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor          = eDP-1
+bottom           = true
+fixed-center     = true
+width            = 2144
+height           = 32
+; set to bspc gap
+offset-x         = 8
+offset-y         = 8
+background       = ${colors.bg}
+foreground       = ${colors.fg}
+radius           = 0.0
+; {overline,underline}
+line-size        = 1
+line-color       = #f00
+; border-{left,top,right,bottom}
+; border-size    = 1
+; border-color   = #fff
+; padding-{left,right} (in spaces, for entire bar)
+padding          = 1
+; module-margin-{left,right} (in spaces, padding for each module)
+module-margin    = 1
+; Fonts are defined using <font-name>;<vertical-offset>
+font-0           = Iosevka:size=20;4
+font-1           = FontAwesome:size=20;4
+; Modules
+modules-left     =  clock battery
+modules-center   = bspwm
+modules-right    = 
+; char between each module
+separator        = "|"
+; Opacity value between 0.0 and 1.0 used on fade in/out
+dim-value        = 1.0
+wm-name          = bspwm
+locale           = en_US.UTF8
+tray-position    = right
+tray-detached    = false
+tray-maxsize     = 16
+tray-transparent = false
+tray-background  = ${root.background}
+tray-offset-x    = 0
+tray-offset-y    = 0
+tray-padding     = 0
+tray-scale       = 1.0
+wm-restack       = bspwm
+
+;click-left = 
+;click-middle = 
+;click-right =
+;scroll-up =
+;scroll-down =
+;double-click-left =
+;double-click-middle =
+;double-click-right =
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;; MODULES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/bspwm]
+type                   = internal/bspwm
+pin-workspaces         = true
+enable-click           = true
+; enable-scroll        = true
+; reverse-scroll       = false
+fuzzy-match            = true
+label-monitor          = %name%
+label-focused          = 
+label-focused-padding  = 1
+label-occupied         = 
+label-occupied-padding = 1
+label-empty            = 
+label-empty-padding    = 1
+label-urgent           = 
+
+[module/clock]
+type   = internal/date
+date   = %d-%m-%Y
+time   = %H:%M:%S
+format = <label>
+label  = %time% | %date%
+
+[module/battery]
+type               = internal/battery
+battery            = BAT0
+adapter            = AC0
+poll-interval      = 5
+format-charging    = <label-charging>
+format-discharging = <label-discharging>
+format-full        = <label-full>
+label-charging     = %percentage%%+
+label-discharging  = %percentage%%
+label-full         = %percentage%%
