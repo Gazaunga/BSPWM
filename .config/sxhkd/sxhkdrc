@@ -188,3 +188,7 @@ super + shift + p
 # dropdowns
 F12
   tdrop -a -w 2144 -h 400 -x 8 -y 990 urxvt
+  
+  # scratch
+  id=$(cat /tmp/scratchid);\
+bspc node $id --flag hidden;bspc node -f $id
