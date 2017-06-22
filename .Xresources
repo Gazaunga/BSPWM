@@ -1,0 +1,55 @@
+Xcursor.theme: capitaine-cursors
+
+Xft.dpi: 109
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.rgba: rgb
+Xft.autohint: 1
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcdlight
+
+URxvt*font: xft:Iosevka Term:style=Heavy:pixelsize=12,xft:M+ 1mn:style=medium:pixelsize=13
+*faceName: xft:Iosevka Term:style=Bold:pixelsize=14
+*.locale: true
+*.internalBorder: 32
+URxvt.geometry: 96x24
+
+*cursorBlink: true
+*scrollBar: false
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Left: \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Home: \033[7~
+URxvt.keysym.End: \033[8~
+
+#colours
+*.background: #222022
+*.foreground: #F3D7D1
+
+*.color0:  #493441
+*.color8:  #382536
+
+*.color1:  #CB4E72
+*.color9:  #C92F4C
+
+*.color2:  #AB579C
+*.color10: #7A449A
+
+*.color3:  #E9A66C
+*.color11: #C64950
+
+*.color4:  #497DD8
+*.color12: #52326C
+
+*.color5:  #F4DDCC
+*.color13: #E38D79
+
+*.color6:  #F5616D
+*.color14: #C12F4D
+
+*.color7:  #AC9C93
+*.color15: #F3D7D1
