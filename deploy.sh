@@ -32,7 +32,7 @@ blue=$(tput setaf 38)
 e_success() { printf "${green}✔ %s${reset}\n" "$@"
 }
 
-cd ~/BSPWM
+cd ~
 dirmerge $HOME/BSPWM $HOME/
 e_success "Directories Merged!"
 
