@@ -1,0 +1,23 @@
+# Move to the next file with the left and right arrow keys.
+\kr         next-file
+\kl         prev-file
+# Inspiration: http://linuxgazette.net/174/grebler.html
+
+# Map the l and h keys to scroll right and left.
+# This means help must be accessed with H, not h.
+# If you need to scroll e.g. one char to the left, type 1h.
+l           right-scroll
+h           left-scroll
+# https://unix.stackexchange.com/questions/59188/how-to-set-up-hjkl-for-less
+
+# Make spacebar, f-key, and page-down scroll a full screenful,
+# even if it reaches end-of-file in the process.
+\kD         forw-screen-force
+f           forw-screen-force
+\40         forw-screen-force
+
+# Make lesss use case-insensitive search by default (-i)
+# and display color (-R).
+#env
+LESS = -i -R
+# Source: https://ascending.wordpress.com/2011/02/11/unix-tip-make-less-more-friendly/
