@@ -52,3 +52,6 @@ if [ "$TERM" = "screen" ]; then
     export TERM=screen-256color
 fi
 
+# Remove if you get liquid prompt
+parse_git_branch(){ git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1)/"; }
+export PS1="\u[\w]\$(parse_git_branch)$ "
