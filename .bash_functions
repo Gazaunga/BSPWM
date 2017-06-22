@@ -160,3 +160,61 @@ function up {
         cd $CDSTR
     fi
 }
+
+# Rerun the last cmd and put its output into the clipboard
+copy() {
+  eval `history | line -s -2 | sed -r "s/[0-9]+//"` | pb;
+}
+
+# Just take the last command and put that command into the clipboard
+copycmd() {
+  echo `history | line -s -2 | sed -E "s/[0-9]+[ \t]+//"` | pb;
+}
+
+pb() {
+  ruby -e "print STDIN.readlines.to_s.strip()" | pbcopy;
+}
+
+fileurl() {
+  if [ "$1" ]
+    then echo "file://$(pwd)/$1"
+    else echo "file://$(pwd)"
+  fi
+}
+
+# Get the full path of the current directory or the given file
+path() {
+  if [ "$1" ]
+    then echo "$PWD/$1"
+    else pwd
+  fi
+}
+
+# Shortcut for `open` but no arguments opens the current directory
+better_open() {
+  if [ "$1" ]
+    then `open "$1"`
+    else `open .`
+  fi
+}
+
+# Append to an Environmental Variable
+addto() {
+  old=`env | grep "^$1=" | sed "s/^$1=//"`
+  export $1=$old:$2
+}
+
+# Merge two directories. Copying over files.
+# Usage: merge dir1 dir2
+# This copies everything in dir1 INTO dir2, overwriting same named files
+dirmerge() {
+  if [[ $# == 2 ]]; then
+    dir1=$1
+    dir2=$2
+    echo "Merging $1 into $2"
+    cp -R -v $1/* $2
+  else
+    echo 'usage: dirmerge dir1 dir2'
+  fi
+}
+
