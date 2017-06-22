@@ -1,2 +1,0 @@
-## C/C++
-include "~/.nano/c.nanorc"
