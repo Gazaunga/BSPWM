@@ -85,3 +85,17 @@ alias mkdir='mkdir -p -v'
 
 alias tnethack='telnet nethack.alt.org'
 
+alias cl='clear;ls'
+
+alias err='echo $?'
+
+alias xo='xargs open'
+
+alias af='find . | ack'
+
+alias recent='ls -lAt | head'
+
+alias now='ruby -e "puts Time.now.to_i"'
+
+alias ql='qlmanage -p "$@" >& /dev/null' # Quick Look alias
+
