@@ -39,4 +39,8 @@ setxkbmap -option compose:menu
 
 xrdb -merge ~/.Xresources
 
-feh --randomize --bg-fill ~/Wallpapers/Desktop
+feh --randomize --bg-fill ~/Pictures/Wallpapers
+
+# adapt to your own terminator emulator
+bspc rule -a scratchpad sticky=on state=floating hidden=on
+st -c scratchpad -e ~/bin/scratch &
