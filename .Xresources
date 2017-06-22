@@ -53,3 +53,121 @@ URxvt.keysym.End: \033[8~
 
 *.color7:  #AC9C93
 *.color15: #F3D7D1
+
+
+#########
+# ROFI  #
+#########
+
+! Enabled modi
+rofi.modi:                           window,run,ssh
+! Window opacity
+rofi.opacity:                        100
+! Window width
+rofi.width:                          23
+! Number of lines
+rofi.lines:                          1
+! Number of columns
+rofi.columns:                        1
+! Font to use
+rofi.font:                           Iosevka 20
+! Color scheme for normal row
+rofi.color-normal:                   #2e3440,#d8dee9,#2e3440,#2e3440,#d8dee9
+! Color scheme for urgent row
+rofi.color-urgent:                   #2e3440,#d8dee9,#2e3440,#2e3440,#d8dee9
+! Color scheme for active row
+rofi.color-active:                   #2e3440,#d8dee9,#2e3440,#2e3440,#d8dee9
+! Color scheme window
+rofi.color-window:                   #2e3440,#d8dee9
+! Border width
+rofi.bw:                             0
+! Location on screen
+rofi.location:                       0
+! Padding
+rofi.padding:                        0
+! Y-offset relative to location
+rofi.yoffset:                        635
+! X-offset relative to location
+rofi.xoffset:                        0
+! Always show number of lines
+rofi.fixed-num-lines:                false
+! Terminal to use
+rofi.terminal:                       urxvt
+! Ssh client to use
+rofi.ssh-client:                     ssh
+! Ssh command to execute
+rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
+! Run command to execute
+rofi.run-command:                    {cmd}
+! Command to get extra run targets
+rofi.run-list-command:               
+! Run command to execute that runs in shell
+rofi.run-shell-command:              {terminal} -e {cmd}
+! Command executed on accep-entry-custom for window modus
+rofi.window-command:                 xkill -id {window}
+! Disable history in run/ssh
+rofi.disable-history:                false
+! Use levenshtein sorting
+rofi.levenshtein-sort:               false
+! Set case-sensitivity
+rofi.case-sensitive:                 false
+! Cycle through the results list
+rofi.cycle:                          true
+! Enable sidebar-mode
+rofi.sidebar-mode:                   false
+! Row height (in chars)
+rofi.eh:                             1
+! Enable auto select mode
+rofi.auto-select:                    false
+! Parse hosts file for ssh mode
+rofi.parse-hosts:                    false
+! Parse known_hosts file for ssh mode
+rofi.parse-known-hosts:              true
+! Set the modi to combine in combi mode
+rofi.combi-modi:                     window,run
+! Do a more fuzzy matching
+rofi.fuzzy:                          false
+! Use glob matching
+rofi.glob:                           false
+! Use regex matching
+rofi.regex:                          false
+! Tokenize input string
+rofi.tokenize:                       true
+! Monitor id to show on
+rofi.m:                              -1
+! Margin between rows
+rofi.line-margin:                    0
+! Pre-set filter
+rofi.filter:                         
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid
+! Hide scroll-bar
+rofi.hide-scrollbar:                 true
+! Fullscreen
+rofi.fullscreen:                     false
+! Fake transparency
+rofi.fake-transparency:              false
+! DPI
+rofi.dpi:                            -144
+! Threads to use for string matching
+rofi.threads:                        1
+! Scrollbar width
+rofi.scrollbar-width:                8
+! Scrolling method. (0: Page, 1: Centered)
+rofi.scroll-method:                  0
+! Background to use for fake transparency. (background or screenshot)
+rofi.fake-background:                screenshot
+
+
+! The display name of this browser
+rofi.display-ssh:                    ssh to
+! The display name of this browser
+rofi.display-run:                    launch:
+! The display name of this browser
+rofi.display-drun:                   launch 
+! The display name of this browser
+rofi.display-window:                 go to
+! The display name of this browser
+rofi.display-windowcd:               
+! The display name of this browser
+rofi.display-combi: 
